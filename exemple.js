@@ -1,6 +1,4 @@
 
-
-
 function startGame () {
 
     function justePrix (goodPrice, userPrice) {
@@ -19,7 +17,6 @@ function startGame () {
             alert(`Bravo, ${userName} gagne en ${count} essai(s) !`);
             return replay();
         }
-
     } 
 
     function replay () {
