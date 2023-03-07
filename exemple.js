@@ -14,7 +14,7 @@ function startGame () {
         }
         else {
             count++
-            alert(`Bravo, ${userName} gagne en ${count} essai(s) !`);
+            alert(`Bravo, ${userName} gagne en ${count} essai(s) ! Le nombre à trouver était ${rightPrice}`);
             return replay();
         }
     } 
