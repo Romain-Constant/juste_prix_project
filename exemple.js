@@ -39,12 +39,12 @@ function replay () {
 //déclarer une fonction pour vérifier si le choix de l'utilisateur est bien un entier
 function askUserChoice () {
     let userNumber = prompt("Choisissez un nombre entre un et 100");
-    if (!Number.isInteger(userNumber)) {
+    if (!Number.isInteger(userNumber * 1)) {
         alert("Choix invalide");
         return askUserChoice();
     }
     else {
-        return userNumber;
+        return parseInt(userNumber);
     }
 }
 
