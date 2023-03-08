@@ -2,7 +2,7 @@
 function justePrix () { 
     const rightPrice = Math.floor(Math.random() * 100) + 1; //génération d'un nombre secret aléatoire entre un et 100
     let userName = prompt("Quelle est votre nom ?"); //demander le nom de l'utilisateur
-    let userChoice = prompt("Choisissez un nombre entre un et 100"); //demander à l'utilisateur un nombre
+    let userChoice = parseInt(prompt("Choisissez un nombre entre un et 100")); //demander à l'utilisateur un nombre
     let count = 1; //déclarer une variable pour le nombre de tentatives
 
     while (userChoice != rightPrice) {
