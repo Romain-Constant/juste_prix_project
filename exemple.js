@@ -2,7 +2,8 @@
 function justePrix () { 
     const rightPrice = Math.floor(Math.random() * 100) + 1; //génération d'un nombre secret aléatoire entre un et 100
     let userName = prompt("Quelle est votre nom ?"); //demander le nom de l'utilisateur
-    let userChoice = parseInt(prompt("Choisissez un nombre entre un et 100")); //demander à l'utilisateur un nombre
+   /*  let userChoice = parseInt(prompt("Choisissez un nombre entre un et 100")); //demander à l'utilisateur un nombre */
+    let userChoice = askUserChoice();
     let count = 1; //déclarer une variable pour le nombre de tentatives
 
     while (userChoice != rightPrice) {
@@ -33,6 +34,18 @@ function replay () {
     else {
         alert("Choix non valide. "); //si userRaplay n'est ni "oui", ni "non"
         return replay(); //appel de la fonction replay
+    }
+}
+
+//déclarer une fonction pour vérifier si le choix de l'utilisateur est bien un entier
+function askUserChoice () {
+    let userNumber = prompt("Choisissez un nombre entre un et 100");
+    if (!Number.isInteger(userNumber)) {
+        alert("Choix invalide");
+        return askUserChoice();
+    }
+    else {
+        return userNumber;
     }
 }
 
